@@ -1,0 +1,30 @@
+{
+  "name": "verus-tx-offline",
+  "version": "1.0.0",
+  "description": "Offline Verus transaction building, signing, and identity utilities. Build and sign VRSC payments, P2ID (identity) transactions, identity updates, VDXF encoding, and message signing — no daemon required.",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "files": ["dist", "scripts", "LICENSE"],
+  "keywords": ["verus", "vrsc", "offline", "transaction", "signing", "identity", "vdxf", "p2id", "cryptocurrency"],
+  "license": "MIT",
+  "dependencies": {
+    "@bitgo/utxo-lib": "github:VerusCoin/BitGoJS#5e82f4fd",
+    "verus-typescript-primitives": "git+https://github.com/VerusCoin/verus-typescript-primitives.git",
+    "bitcoinjs-message": "^2.2.0",
+    "bs58check": "^4.0.0",
+    "json-canonicalize": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
